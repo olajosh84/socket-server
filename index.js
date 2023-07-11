@@ -62,7 +62,7 @@ io.on("connection", (socket) => {
     socket.on("sendMessage", ({conversationId, senderId, receiverId, text}) => {
         //get receiver socket id
         const receiver = getReceiverSocketId(receiverId);
-        io.to(receiver.socketId).emit("getMessage", {conversationId, senderId, text});
+        io.to(receiver?.socketId).emit("getMessage", {conversationId, senderId, text});
         
     })
    /**when user closes the app or disconnects,
