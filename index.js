@@ -10,8 +10,8 @@ const origin = process.env.CLIENT_URI;
 const io = new Server(http, {
     cors: {
         origin: origin,
-        methods: ["POST", 'GET'],
-        credentials: true
+        //methods: ["POST", 'GET'],
+        credentials: true,
     }
 })
 let users = []; //all users without removing any
